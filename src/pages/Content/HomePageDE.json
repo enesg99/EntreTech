@@ -1,7 +1,5 @@
 {
-    "content": {
-        "header": {
-            "welcomeText": "Herzlich Willkommen bei EntreTech"
-        }
+    "header": {
+        "welcomeText": "Herzlich Willkommen bei EntreTech"
     }
 }

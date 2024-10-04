@@ -1,11 +1,19 @@
 import { Outlet, Link } from "react-router-dom";
 import "./componentStyle/navbar.css"; 
+import { useState } from "react";
 
 function NavbarComp() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return ( 
     <>
       <nav>
-        <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
+        <div id="logoContainer">
           <div id='logo'>
             <span style={{ width: '20px', height: '20px', border: '1px solid black', 
                   backgroundColor: 'white', display: 'block', borderRadius: '5px' }}>
@@ -19,7 +27,7 @@ function NavbarComp() {
             <p>Your passion is our mission</p>
           </div>
         </div>
-        <div class="navUnterding">
+        <div id="navLinkContainer">
           <ul>
             <li><Link to='/'>Home</Link></li>
             <li><Link to=''>Tracks</Link></li> 
@@ -29,7 +37,20 @@ function NavbarComp() {
         </div>
       </nav>
 
-      <hr />
+      <div id="hamburgerMenu" onClick={toggleMenu}>
+        <div className="spanContainer">
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+        </div>
+      </div>
+
+      <ul className={`hamburgerMenuItems ${isMenuOpen ? 'open' : ''}`}>
+        <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
+        <li><Link to='/tracks' onClick={toggleMenu}>Tracks</Link></li> 
+        <li><Link to='/faq' onClick={toggleMenu}>FAQ</Link></li> 
+        <li><Link to='/contact' onClick={toggleMenu}>Kontakt</Link></li>
+      </ul>
 
       <Outlet />
     </>
@@ -37,17 +58,3 @@ function NavbarComp() {
 }
 
 export default NavbarComp;
-
-{/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-</nav> */}

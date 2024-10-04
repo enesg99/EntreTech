@@ -1,8 +1,9 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40%;
     margin: 20px;
-    width: 80%;
+    width: 100%;
 }
 
 nav ul {
@@ -12,6 +13,7 @@ nav ul {
 nav ul li {
     list-style: none;
     margin: 0 20px;
+    font-size: 1.2rem;
 }
 
 nav a {
@@ -28,17 +30,84 @@ nav button {
     cursor: pointer;
 }
 
-.navUnterding {
+#logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#navLinkContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-hr {
-    width: 90%;
-    margin-left: 5%;
-}
-
 #logo {
     margin-top: 15px;
+}
+
+#hamburgerMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburgerMenuItems {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.hamburgerMenuItems li {
+    margin: 4px 0;
+}
+
+.hamburgerMenuItems a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hamburgerMenuItems.open {
+    display: flex;
+}
+
+@media screen and (max-width: 950px) {
+    #navLinkContainer {
+        display: none;
+    }
+
+    #hamburgerMenu {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+
+    .hamburger {
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: black;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .hamburgerMenuItems {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburgerMenuItems.open {
+        display: flex;
+        align-items: center;
+    }
 }
