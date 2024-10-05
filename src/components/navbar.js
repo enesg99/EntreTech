@@ -18,7 +18,7 @@ function NavbarComp() {
             <span style={{ width: '20px', height: '20px', border: '1px solid black', 
                   backgroundColor: 'white', display: 'block', borderRadius: '5px' }}>
             </span>
-            <span style={{ width: '20px', height: '20px', border: '1px solid black', backgroundColor: 'black', 
+            <span style={{ width: '20px', height: '20px', border: '1px solid black', backgroundColor: 'black',
                   display: 'block', position: 'relative', top: '-27px', left: '-7px', borderRadius: '5px' }}>
             </span>
           </div>
@@ -30,7 +30,7 @@ function NavbarComp() {
         <div id="navLinkContainer">
           <ul>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to=''>Tracks</Link></li> 
+            <li><Link to='/tracks'>Tracks</Link></li> 
             <li><Link to=''>FAQ</Link></li> 
             <li><Link to=''>Kontakt</Link></li> 
           </ul>
@@ -48,8 +48,8 @@ function NavbarComp() {
       <ul className={`hamburgerMenuItems ${isMenuOpen ? 'open' : ''}`}>
         <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
         <li><Link to='/tracks' onClick={toggleMenu}>Tracks</Link></li> 
-        <li><Link to='/faq' onClick={toggleMenu}>FAQ</Link></li> 
-        <li><Link to='/contact' onClick={toggleMenu}>Kontakt</Link></li>
+        <li><Link to='' onClick={toggleMenu}>FAQ</Link></li> 
+        <li><Link to='' onClick={toggleMenu}>Kontakt</Link></li>
       </ul>
 
       <Outlet />
