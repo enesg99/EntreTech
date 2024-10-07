@@ -1,0 +1,43 @@
+.pathContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.pathLine {
+    display: block;
+    width: 3px;
+    height: 150px;
+    background-color: red;
+    position: relative;
+}
+
+.pathCircle {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.pathTopicContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pathContentContainer {
+    width: 300px;
+    background-color: lightgray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    height: 120px;
+}
+
+.pathContentContainer:hover {
+    background-color: black;
+    color: white;
+}

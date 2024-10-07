@@ -1,53 +1,32 @@
-import './pagesStyle/WebDevPath.css'
-import { useState } from 'react';
+import TrackPathContainer from '../components/trackPathContainer';
 
 function WebDevPath() {
-    // State, um den Hover-Zustand zu verfolgen
-    const [isHovered, setIsHovered] = useState(false);
-
-    // Funktionen, um den Hover-Zustand zu ändern
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
-    return ( 
+    return (
         <>
-            <div class="header">
+            <div class="header" style={{marginBottom: "40px"}}>
                 <h1>Web Entwicklung - Übersicht</h1>
-                <h2>Hier kannst du dir ansehen, welche Stationen du durchläuft, um Web Entwicklung zu lernen</h2>
+                <h2>Hier kannst du dir ansehen, welche Stationen du durchläufst, um Web Entwicklung zu lernen</h2>
             </div>
-            <section class="design-section">
-                <div class="timeline">
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-middle">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-component timeline-content">
-                        <h3>HTML</h3>
-                        <p>Some Text</p>
-                    </div>
-                    <div style={{textAlign:"right"}} class="timeline-component timeline-content">
-                        <h3>CSS</h3>
-                        <p>Some Text.</p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-empty"></div>
-                    <div class="timeline-middle">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class=" timeline-component timeline-content">
-                        <h3>Javascript</h3>
-                        <p>Some Text.</p>
-                    </div>
-                </div>        
-            </section>
+            <TrackPathContainer topic={{ 
+                url: "basics",
+                name: "1. Basics",
+                content: "Bevor du dich an das Programmieren setzt, ist es wichtig, erst einmal ein paar Grundlagen zu lernen."
+            }} />
+            <TrackPathContainer topic={{ 
+                url: "html",
+                name: "2. HTML",
+                content: "Eine Skriptsprache, mit der du den Inhalt einer Website steuerst."
+            }} />
+            <TrackPathContainer topic={{ 
+                url: "css",
+                name: "3. CSS",
+                content: "Eine Skriptsprache, die für das Styling der Seite verantwortlich ist."
+            }} />
+            <TrackPathContainer topic={{ 
+                url: "javascript",
+                name: "4. JavaScript",
+                content: "Deine erste Programmiersprache. Früher nur für die Logik einer Website verwendet, heute aber ein Allrounder."
+            }} />
         </>
     );
 }
