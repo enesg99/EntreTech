@@ -4,14 +4,14 @@ import {Link} from "react-router-dom"
 function TrackPage() {
     return ( 
         <>
-            <div class="header">
+            <div className="header">
                 <h1>Tracks</h1>
                 <h2>Hier findest du einen Überblick über unsere Tracks.</h2>
                 <p>Wenn du mehr über die Tracks wissen möchtest, kannst du drauf klicken, um dir den Lernpfad anzusehen.</p>
             </div>
-            <div class="main">
+            <div className="main">
                 <Link to="/tracks/webdevpath">
-                    <div class="trackContainer">
+                    <div className="trackContainer">
                         <h2>Web Entwicklung</h2>
                         <p style={{marginTop:'20px'}}>
                             Von deinem eigenen Blog bis zu einem eigenen Onlineshop, 
@@ -22,7 +22,7 @@ function TrackPage() {
                         </p>
                     </div>
                 </Link>
-                <div class="trackContainer">
+                <div className="trackContainer">
                     <h2>Web Entwicklung</h2>
                     <p style={{marginTop:'20px'}}>
                         Von deinem eigenen Blog bis zu einem eigenen Onlineshop, 

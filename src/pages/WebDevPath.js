@@ -3,7 +3,7 @@ import TrackPathContainer from '../components/trackPathContainer';
 function WebDevPath() {
     return (
         <>
-            <div class="header" style={{marginBottom: "40px"}}>
+            <div className="header" style={{marginBottom: "40px"}}>
                 <h1>Web Entwicklung - Übersicht</h1>
                 <h2>Hier kannst du dir ansehen, welche Stationen du durchläufst, um Web Entwicklung zu lernen</h2>
             </div>
