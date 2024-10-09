@@ -1,11 +1,11 @@
 import Sidebar from "../../components/sideBarWebDev";
-import "./WebDevStyle/WebDevBasics.css";
+import "./WebDevStyle/WebDev.css";
 
 function WebDevBasics() {
     return ( 
         <>
-            <div className="webdevbasicContainer">
-                <h1>WebDevBasics</h1>
+            <div className="webdevContainer">
+                <h1>Basics</h1>
             </div>
             <Sidebar />
         </>

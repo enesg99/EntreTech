@@ -1,7 +1,13 @@
+import Sidebar from '../../components/sideBarWebDev';
+import './WebDevStyle/WebDev.css'
+
 function WebDevHtml() {
     return ( 
         <>
-            <h1>HTML</h1>
+            <div className="webdevContainer">
+                <h1>HTML</h1>
+            </div>
+            <Sidebar />
         </>
     );
 }

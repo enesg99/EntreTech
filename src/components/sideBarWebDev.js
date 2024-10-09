@@ -11,19 +11,19 @@ function SideBarWebDev() {
 
     return ( 
         <>
-            <div id="hamburgerMenu" onClick={toggleMenu}>
-                <div className="spanContainer">
-                    <span className="hamburger"></span>
-                    <span className="hamburger"></span>
-                    <span className="hamburger"></span>
+            <div id="sbHamburgerMenu" onClick={toggleMenu}>
+                <div className="sbSpanContainer">
+                    <span className="sbHamburger"></span>
+                    <span className="sbHamburger"></span>
+                    <span className="sbHamburger"></span>
                 </div>
             </div>
 
-            <ul className={`hamburgerMenuItems ${isMenuOpen ? 'open' : ''}`}>
-                <li><Link to='' onClick={toggleMenu}>Basics</Link></li>
-                <li><Link to='' onClick={toggleMenu}>HTML</Link></li> 
-                <li><Link to='' onClick={toggleMenu}>CSS</Link></li> 
-                <li><Link to='' onClick={toggleMenu}>Javascript</Link></li>
+            <ul className={`sbHamburgerMenuItems ${isMenuOpen ? 'open' : ''}`}>
+                <li><Link to='/tracks/webdevpath/basics' onClick={toggleMenu}>Basics</Link></li>
+                <li><Link to='/tracks/webdevpath/html' onClick={toggleMenu}>HTML</Link></li> 
+                <li><Link to='/tracks/webdevpath/css' onClick={toggleMenu}>CSS</Link></li> 
+                <li><Link to='/tracks/webdevpath/javascript' onClick={toggleMenu}>Javascript</Link></li>
             </ul>
         </>
     );

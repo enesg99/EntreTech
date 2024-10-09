@@ -1,11 +1,11 @@
-#hamburgerMenu {
+#sbHamburgerMenu {
     display: block;
     position: absolute;
     top: 100px;
     left: 30px;
 }
 
-.hamburger {
+.sbHamburger {
     display: block;
     width: 35px;
     height: 4px;
@@ -14,17 +14,27 @@
     margin-bottom: 5px;
 }
 
-.hamburgerMenuItems {
-    display: none;
+.sbHamburgerMenuItems {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: max-height 0.1s linear;
     flex-direction: column;
     align-items: center;
     position: absolute;
     left: 0;
     top: 150px;
     width: 30%;
-    height: 100%;
     background-color: lightgray;
     list-style: none;
-    padding: 10px;
     border-radius: 5px;
+}
+
+.sbHamburgerMenuItems.open {
+    max-height: 500px;
+    padding: 15px;
+}
+
+.sbHamburgerMenuItems  li {
+    margin: 10px 0;
 }
